@@ -1,0 +1,11 @@
+{
+    "header": {
+        "home": "Home",
+        "event": "Event",
+        "deschool": "DeSchool",
+        "govern": "Govern",
+        "nft": "NFT",
+        "seedhack": "SeedHack",
+        "connect-wallet": "Connect Wallet"
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "header": {
+        "home": "首页",
+        "event": "活动",
+        "deschool": "学习",
+        "govern": "治理",
+        "nft": "NFT",
+        "seedhack": "创客松",
+        "connect-wallet": "接入钱包"
+    }
+}
