@@ -210,6 +210,7 @@ export default {
         class="hidden sm:flex justify-between items-center flex-col md:flex-row"
       >
       <div
+          v-if="isConnected()"
           class="
             mr-5
             h-10
@@ -224,7 +225,6 @@ export default {
           "
       >
         <router-link
-          v-if="isConnected()"
           to="/about">
           <i data-feather="user"></i>
         </router-link>

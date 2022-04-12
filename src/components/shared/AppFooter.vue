@@ -25,7 +25,7 @@ export default {
 				{
 					id: 4,
 					name: 'OpenSea',
-					src: require('@/assets/images/opensea.png'),
+					src: require('@/assets/images/opensea.svg'),
 					url: 'https://opensea.io/collection/seedaogenesis',
 				}
 			],
