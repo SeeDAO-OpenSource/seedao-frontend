@@ -66,8 +66,9 @@ export default {
       :aria-label="t('header.event')"
       >{{ t("header.event") }}</router-link
     >
-    <router-link
-      to="/c"
+    <a
+      href="https://stg.deschool.app/"
+      target="_blank"
       class="
         font-general-medium
         block
@@ -82,8 +83,7 @@ export default {
         sm:py-2
       "
       :aria-label="t('header.deschool')"
-      >{{ t("header.deschool") }}</router-link
-    >
+      >{{ t("header.deschool") }}</a>
     <a
       target="_blank"
       href="https://forum.seedao.xyz/"
@@ -101,8 +101,7 @@ export default {
         sm:py-2
       "
       :aria-label="t('header.govern')"
-      >{{ t("header.govern") }}</a
-    >
+      >{{ t("header.govern") }}</a>
     <router-link
       to="/nft"
       class="
