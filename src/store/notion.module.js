@@ -25,13 +25,9 @@ const actions = {
         return new Promise((resolve) => {
             const params = { databaseId: notionDB[name] };
             NotionService.post(params).then((data) => {
-                console.log('datadatadatadata:::', data);
                 context.commit(SET_NOTION_DATA, data);
                 resolve(data);
-            })
-            // const data = await NotionService.post(`${notionDB[name]}/query`);
-            // console.log('datadatadatadata:::', data);
-            // context.commit(SET_NOTION_DATA, data);        
+            })     
         });
     }
 };
