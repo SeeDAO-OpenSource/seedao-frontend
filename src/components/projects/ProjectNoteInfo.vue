@@ -1,6 +1,6 @@
 <script>
 export default {
-	props: ['project'],
+	props: ['project', 'events'],
 };
 </script>
 
@@ -28,37 +28,13 @@ export default {
         <div class="w-2/3 pl-5 text-left">主题</div>
       </div>
       <div class="absolute inset-3 overflow-auto pt-10 px-6 pb-4 space-y-4 font-flow">
-        <div class="flex">
-          <div class="w-1/3 text-left">2022/2/11     23:40</div>
-          <div class="w-2/3 text-left pl-5">Michael Scott</div>
-        </div>
-        <div class="flex">
-          <div class="w-1/3 text-left">2022/2/11     23:40</div>
-          <div class="w-2/3 text-left pl-5">Michael Scott</div>
-        </div>
-        <div class="flex">
-          <div class="w-1/3 text-left">2022/2/11     23:40</div>
-          <div class="w-2/3 text-left pl-5">Michael Scott</div>
-        </div>
-        <div class="flex">
-          <div class="w-1/3 text-left">2022/2/11     23:40</div>
-          <div class="w-2/3 text-left pl-5">Michael Scott</div>
-        </div>
-        <div class="flex">
-          <div class="w-1/3 text-left">2022/2/11     23:40</div>
-          <div class="w-2/3 text-left pl-5">Michael ScottCreed Bratton</div>
-        </div>
-        <div class="flex">
-          <div class="w-1/3 text-left">2022/2/11     23:40</div>
-          <div class="w-2/3 text-left pl-5">Michael ScottCreed Bratton</div>
-        </div>
-        <div class="flex">
-          <div class="w-1/3 text-left">2022/2/11     23:40</div>
-          <div class="w-2/3 text-left pl-5">Michael ScottCreed Bratton</div>
-        </div>
-        <div class="flex">
-          <div class="w-1/3 text-left">2022/2/11     23:40</div>
-          <div class="w-2/3 text-left pl-5">Michael Scott</div>
+        <div v-for="(event, index) in events.slice(0, 10)" :key="index" class="flex">
+          <div class="w-1/3 text-left">{{  event.start.getFullYear() + "/"
+                + (event.start.getMonth()+1)  + "/" 
+                + event.start.getDate() + " "  
+                + String(event.start.getHours()).padStart(2, '0')+ ":"  
+                + String(event.start.getMinutes()).padStart(2, '0') }}</div>
+          <div class="w-2/3 text-left pl-5">{{ event.summary }}</div>
         </div>
       </div>
     </div>

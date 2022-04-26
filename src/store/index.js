@@ -2,6 +2,7 @@ import Vuex from 'vuex'
 
 import wallet from './wallet.module';
 import notion from './notion.module';
+import ical from './ical.module';
 
 export default new Vuex.Store({
   state: {
@@ -15,6 +16,7 @@ export default new Vuex.Store({
   },
   modules: {
     wallet,
-    notion
+    notion,
+    ical
   }
 })
