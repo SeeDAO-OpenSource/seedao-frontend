@@ -57,16 +57,16 @@ export default {
     </div>
     <div class="relative h-64 font-medium tableOutline m-5">
       <div class="absolute left-0 right-0 top-0 z-10 px-4 py-3 flex tableTitle">
-        <div class="w-1/4 pl-5 text-left">项目</div>
-        <div class="w-1/4 pl-5 text-left">成员</div>
-        <div class="w-1/4 pl-5 text-left">招募</div>
+        <div class="w-3/4 pl-5 text-left">项目</div>
+        <!-- <div class="w-1/4 pl-5 text-left">成员</div>
+        <div class="w-1/4 pl-5 text-left">招募</div> -->
         <div class="w-1/4 pl-5 text-left">激励</div>
       </div>
       <div class="absolute inset-3 overflow-auto pt-10 px-6 pb-4 space-y-4 font-flow">
         <div class="flex" v-for="(task, index) in bounty" :key="index">
-          <div class="w-1/4 text-left">{{ task.task }}</div>
-          <div class="w-1/4 text-left">{{ task.member }}</div>
-          <div class="w-1/4 pl-5 text-left">{{ task.recruit }}</div>
+          <div class="w-3/4 text-left">{{ task.task }}</div>
+          <!-- <div class="w-1/4 text-left">{{ task.member }}</div>
+          <div class="w-1/4 pl-5 text-left">{{ task.recruit }}</div> -->
           <div class="w-1/4 pl-5 text-left">{{ task.reward }}</div>
         </div>
       </div>
