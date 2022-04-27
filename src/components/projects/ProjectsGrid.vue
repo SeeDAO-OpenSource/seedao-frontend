@@ -10,6 +10,10 @@ import {
 	GET_EVENTS,
 	FETCH_EVENTS
 } from "@/store/ical.module";
+import {
+	GET_BOUNTY_DATA,
+	FETCH_BOUNTY_DATA
+} from "@/store/notion.module";
 
 export default {
   components: {
@@ -35,8 +39,8 @@ export default {
       }
       return this.projects;
     },
-	...mapGetters([GET_EVENTS]),
-    ...mapActions([FETCH_EVENTS]),
+	...mapGetters([GET_EVENTS, GET_BOUNTY_DATA]),
+    ...mapActions([FETCH_EVENTS, FETCH_BOUNTY_DATA]),
   },
   methods: {
     // Filter projects by category
@@ -57,7 +61,9 @@ export default {
   },
   mounted() {
     feather.replace();
-	  this.$store.dispatch(FETCH_EVENTS);
+	  this.$store.dispatch(FETCH_EVENTS).then(()=>{
+      this.$store.dispatch(FETCH_BOUNTY_DATA);
+    })
   },
 };
 </script>
@@ -101,7 +107,7 @@ export default {
     <section
       class="flex flex-col sm:justify-between sm:flex-row mt-12 sm:mt-10"
     >
-      <ProjectNoteInfo :events="getEvents" />
+      <ProjectNoteInfo :events="getEvents" :bounty="getBountyData" />
     </section>
     <!-- Projects Honor Roll End-->
   </section>

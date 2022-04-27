@@ -1,6 +1,6 @@
 <script>
 export default {
-	props: ['project', 'events'],
+	props: ['project', 'events', 'bounty'],
 };
 </script>
 
@@ -18,7 +18,7 @@ export default {
         </div>
       </div>
       <div class="w-full flex flex-wrap justify-end content-center pr-10 ">
-        <p>more</p>
+        <p><a href="/activity">more</a></p>
       </div>
     </div>
 
@@ -52,7 +52,7 @@ export default {
         </div>
       </div>
       <div class="w-full flex flex-wrap justify-end content-center pr-10 ">
-        <p>more</p>
+        <p><a href="/bounty">more</a></p>
       </div>
     </div>
     <div class="relative h-64 font-medium tableOutline m-5">
@@ -63,53 +63,11 @@ export default {
         <div class="w-1/4 pl-5 text-left">激励</div>
       </div>
       <div class="absolute inset-3 overflow-auto pt-10 px-6 pb-4 space-y-4 font-flow">
-        <div class="flex">
-          <div class="w-1/4 text-left">aaa</div>
-          <div class="w-1/4 text-left">宣传公会</div>
-          <div class="w-1/4 pl-5 text-left">Writer</div>
-          <div class="w-1/4 pl-5 text-left">NFT</div>
-        </div>
-        <div class="flex">
-          <div class="w-1/4 text-left">aaa</div>
-          <div class="w-1/4 text-left">宣传公会</div>
-          <div class="w-1/4 pl-5 text-left">Writer</div>
-          <div class="w-1/4 pl-5 text-left">NFT</div>
-        </div>
-        <div class="flex">
-          <div class="w-1/4 text-left">aaa</div>
-          <div class="w-1/4 text-left">宣传公会</div>
-          <div class="w-1/4 pl-5 text-left">Writer</div>
-          <div class="w-1/4 pl-5 text-left">NFT</div>
-        </div>
-        <div class="flex">
-          <div class="w-1/4 text-left">aaa</div>
-          <div class="w-1/4 text-left">宣传公会</div>
-          <div class="w-1/4 pl-5 text-left">Writer</div>
-          <div class="w-1/4 pl-5 text-left">NFT</div>
-        </div>
-        <div class="flex">
-          <div class="w-1/4 text-left">aaa</div>
-          <div class="w-1/4 text-left">宣传公会</div>
-          <div class="w-1/4 pl-5 text-left">Writer</div>
-          <div class="w-1/4 pl-5 text-left">NFT</div>
-        </div>
-        <div class="flex">
-          <div class="w-1/4 text-left">aaa</div>
-          <div class="w-1/4 text-left">宣传公会</div>
-          <div class="w-1/4 pl-5 text-left">Writer</div>
-          <div class="w-1/4 pl-5 text-left">NFT</div>
-        </div>
-        <div class="flex">
-          <div class="w-1/4 text-left">aaa</div>
-          <div class="w-1/4 text-left">宣传公会</div>
-          <div class="w-1/4 pl-5 text-left">Writer</div>
-          <div class="w-1/4 pl-5 text-left">NFT</div>
-        </div>
-        <div class="flex">
-          <div class="w-1/4 text-left">aaa</div>
-          <div class="w-1/4 text-left">宣传公会</div>
-          <div class="w-1/4 pl-5 text-left">Writer</div>
-          <div class="w-1/4 pl-5 text-left">NFT</div>
+        <div class="flex" v-for="(task, index) in bounty" :key="index">
+          <div class="w-1/4 text-left">{{ task.task }}</div>
+          <div class="w-1/4 text-left">{{ task.member }}</div>
+          <div class="w-1/4 pl-5 text-left">{{ task.recruit }}</div>
+          <div class="w-1/4 pl-5 text-left">{{ task.reward }}</div>
         </div>
       </div>
     </div>

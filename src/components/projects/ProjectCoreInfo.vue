@@ -24,11 +24,11 @@ export default {
     <div class="flex flex-wrap justify-between content-center infoItem m-10 px-20 py-2">
       
       <div class=" my-5">
-        <p class="text-4xl font-medium">2,123</p>
+        <p class="text-4xl font-medium">6700<span style="color: #DBE8FF;">+</span></p>
         <p class="text-gray-500">社区人数</p>
       </div>
       <div class=" my-5">
-        <p class="text-4xl font-medium">44,083</p>
+        <p class="text-4xl font-medium">44,000<span style="color: #DBE8FF;">+</span></p>
         <p class="text-gray-500">回溯token总数</p>
       </div>
       <div class=" my-5">

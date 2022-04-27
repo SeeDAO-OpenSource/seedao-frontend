@@ -17,7 +17,7 @@ export default {
 		>
 			&copy; {{ copyrightDate }}.
 			<a
-				href="#"
+				href="https://discord.com/channels/841189467128594442/910851803707490374#"
 				target="__blank"
 				class="font-general-medium hover:underline hover:text-indigo-600 dark:hover:text-indigo-300 duration-500"
 			>

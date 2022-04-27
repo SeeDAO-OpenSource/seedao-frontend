@@ -1,13 +1,13 @@
 <script>
 import ActivityTabs from '../components/activity/ActivityTabs.vue';
-import BountyFilter from '../components/bounty/BountyFilter.vue';
+// import BountyFilter from '../components/bounty/BountyFilter.vue';
 import BountyInfo from '../components/bounty/BountyInfo.vue';
 
 export default {
 	name: 'Bounty',
 	components: {
 		ActivityTabs,
-		BountyFilter,
+		// BountyFilter,
 		BountyInfo,
 	},
 };
@@ -30,7 +30,7 @@ export default {
 				<div class="titlebg_r bg-contain bg-no-repeat w-full"></div>
 			</div>
 		</div>
-		<BountyFilter />
+		<!-- <BountyFilter /> -->
 
 		<!-- Projects -->
 		<BountyInfo />

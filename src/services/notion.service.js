@@ -1,12 +1,11 @@
 require('dotenv').config();
 
-import { inject } from 'vue'
 import config from '@/data/config';
 
 export default {
 
     init() {
-        const axios = inject('axios');
+        const axios = require('axios');
         if (axios !== undefined) {
             if(process.env.NODE_ENV === 'production')
             {

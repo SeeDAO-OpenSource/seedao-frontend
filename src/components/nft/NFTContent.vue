@@ -149,7 +149,7 @@ export default {
 				<div class="h-2/6 p-2 border-t-2 border-gray-700 bg-gray-200 bottom">
 					<div class="flex justify-center">
 						<a
-							href="#"
+							href="https://opensea.io/collection/seedaogenesis"
 							class="flex justify-center items-center w-36 button sm:w-48 sm:mb-0 text-lg border border-indigo-200 dark:border-ternary-dark py-2.5 sm:py-3 shadow-lg rounded-lg bg-indigo-50 focus:ring-1 focus:ring-indigo-900 hover:bg-indigo-500 text-gray-900 hover:text-white duration-500"
 						>
 							<span
@@ -175,7 +175,7 @@ export default {
 				<div class="h-2/6 p-2 border-t-2 border-gray-700 bg-gray-200 bottom">
 					<div class="flex justify-center">
 						<a
-							href="#"
+							href="https://discord.com/channels/841189467128594442/910851803707490374"
 							class="flex justify-center items-center w-36 button sm:w-48 sm:mb-0 text-lg border border-indigo-200 dark:border-ternary-dark py-2.5 sm:py-3 shadow-lg rounded-lg bg-indigo-50 focus:ring-1 focus:ring-indigo-900 hover:bg-indigo-500 text-gray-900 hover:text-white duration-500"
 						>
 							<span

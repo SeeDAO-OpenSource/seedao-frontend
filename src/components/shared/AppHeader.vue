@@ -222,9 +222,9 @@ export default {
             rounded-xl
             cursor-pointer
           "
+           v-if="isConnected()"
       >
         <router-link
-          v-if="isConnected()"
           to="/about">
           <i data-feather="user"></i>
         </router-link>

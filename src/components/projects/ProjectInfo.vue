@@ -32,7 +32,7 @@ export default {
 					>
 						<span>{{ info.title }}: </span>
 						<a
-							href="#"
+							href="https://discord.com/channels/841189467128594442/910851803707490374"
 							:class="
 								info.title == 'Website' || info.title == 'Phone'
 									? 'hover:underline cursor-pointer'

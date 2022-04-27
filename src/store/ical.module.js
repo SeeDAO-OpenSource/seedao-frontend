@@ -48,7 +48,6 @@ const actions = {
                             end: new Date(content.end),
                             description: content.description !== undefined ? content.description : ''
                         };
-                        console.log('thisday::', thisday);
                         if (thisday !== datestr) {
                             if (datestr !== '') {
                                 dailyEvents.unshift({

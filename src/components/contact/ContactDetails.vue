@@ -19,7 +19,7 @@ export default {
 						class="w-5 text-gray-500 dark:text-gray-400 mr-4"
 					></i>
 					<a
-						href="#"
+						href="https://discord.com/channels/841189467128594442/910851803707490374"
 						class="text-lg mb-4 text-ternary-dark dark:text-ternary-light"
 						:class="
 							contact.icon === 'mail' || contact.icon === 'phone'

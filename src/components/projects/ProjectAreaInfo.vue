@@ -7,11 +7,21 @@ export default {
 		return {
 			theme: '',
       areainfos:[
-        { text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in aliquet justo. Nulla varius vitae.' },
-        { text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in aliquet justo. Nulla varius vitae.' },
-        { text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in aliquet justo. Nulla varius vitae.' },
-        { text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in aliquet justo. Nulla varius vitae.' },
-        { text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in aliquet justo. Nulla varius vitae.' }
+        { text: '随着最近 SeeDAO 的成员越来越多，我认为内部需要更多的信息聚合和输出，让DAO内的人协作得更顺滑。所以DeSchool中一个很重要的部分就是Learn。虽然每个人知识水平不同，但大家可以选择学习不同阶段的知识，在实践中晋升和学习。并且你在平台上的所有信息、贡献、学习的课程、身份都登记在链上。',
+         author:'Vera_sir           ',
+         date: '2022/4/8'},
+        { text: 'DeSchool V1 (Learn+Bounty+Identity) 作为DeSchool产品的基础框架将会在下周上线完成。下一步计划除了修改bug、提升用户体验以外，还需要作为早期builder的我们决定V2要聚焦解决的问题。希望各位builder以及所有对deschool感兴趣的小伙伴们一起参与到这个讨论里，你对于未来web3教育、工作、个人身份等看法将会对deschool的产品基因有深远的影响。讨论链接（需要notion权限的小伙伴可以联系我） https://rowan-mollusk-a75.notion.site/DeSchool-f4fbfa2c1b334719a0195e2e595e6300感谢 @NEO @Kyle37 @Ricky Wang 的精彩发言，期待更多伙伴加入一起讨论。',
+         author:'kc',
+         date: '2022/4/6'},
+         { text: '北京时间4月8日（本周五）晚八点，Dework创始人将来到SeeDAO Discord dework-product-chat频道进行一场产品交流会。Dework是一款集合web3产品管理工具、任务发布平台以及web3领英功能的强大产品，在Dework中可实现链上贡献记录，目前拥有一批优秀的DAO入驻其中。',
+         author:'BeiLin            ',
+         date: '2022/4/6'},
+         { text: '大家好，很高兴DeSchool的Alpha终于和大家见面。DeSchool是SeeDAO以DAO的方式孵化出的第一个产品，现阶段的目标是成为Web3的Coursera+LinkedIn+Fiverr。',
+         author:'kc',
+         date: '2022/4/2'},
+         { text: '家人们好~ 产品工会的周会会在今晚八点在Seedao的discrod频道举行。欢迎大家来旁听，互动，seedao and chill',
+         author:'Will Jiang        ',
+         date: '2022/3/9'},
       ]
 		};
 	},
@@ -47,7 +57,7 @@ export default {
       <div class="ml-6 mt-5">
         <div class="flex justify-center sm:block">
           <a
-            href="#"
+            href="https://discord.com/channels/841189467128594442/926102352438640661"
             class="flex items-center"
             aria-label="See all"
           >
@@ -74,17 +84,17 @@ export default {
         class="areainfo flex-none w-60 h-60 m-2"
       >
         <div class="h-2/3 flex flex-wrap justify-start content-center text-left">
-          <p class="p-4 font-semibold">
-            {{info.text}}
+          <p v-if="info.text.length > 65" class="p-4 font-semibold">
+            {{info.text.slice(0,65)}}...
+          </p>
+          <p v-else class="p-4 font-semibold">
+            {{info.text }}
           </p>
         </div>
         <div class="h-1/3 flex">
-          <div class="w-1/3 p-2">
-            <div class="h-14 w-14 flex flex-wrap justify-center content-center c"></div>
-          </div>
           <div class="w-2/3 flex flex-wrap justify-start content-center">
-              <div class="font-semibold">Dev opter</div>
-              <div class="font-semibold text-gray-400">2022.3.23 16:20:23</div>
+              &nbsp;&nbsp;&nbsp;<div class="font-semibold">{{info.author}}</div>
+              <div class="font-semibold text-gray-400">&nbsp;{{info.date}}</div>
           </div>
         </div>
       </div>
