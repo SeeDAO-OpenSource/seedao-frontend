@@ -1,4 +1,10 @@
 [[redirects]]
+  from = "/discordBotApi/*"
+  to = "http://8.210.30.59/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200

@@ -20,7 +20,7 @@ export default {
     get(params) {
         return new Promise((resolve) => {
             const axios = this.init();
-            axios.get('/highlights', params).then(res => resolve(res)).catch((error) => resolve(error));
+            axios.get('/discordBotApi/highlights', params).then(res => resolve(res)).catch((error) => resolve(error));
         });
     },
 
