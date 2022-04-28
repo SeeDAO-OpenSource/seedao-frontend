@@ -120,6 +120,24 @@ export default {
       :aria-label="t('header.nft')"
       >{{ t("header.nft") }}</router-link
     >
+    <router-link
+      to="/daofans"
+      class="
+        font-general-medium
+        block
+        text-left text-lg
+        font-medium
+        text-primary-dark
+        dark:text-ternary-light
+        hover:text-indigo-600
+        dark:hover:text-indigo-300
+        sm:mx-4
+        mb-2
+        sm:py-2
+      "
+      :aria-label="t('header.daofans')"
+      >{{ t("header.daofans") }}</router-link
+    >
     <a
       href="https://seedhacks.xyz/home"
       target="_blank"

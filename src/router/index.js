@@ -41,6 +41,18 @@ const routes = [
 		},
 	},
 	{
+		path: '/daofans',
+		name: 'daofans',
+		// route level code-splitting
+		// this generates a separate chunk (about.[hash].js) for this route
+		// which is lazy-loaded when the route is visited.
+		component: () =>
+			import(/* webpackChunkName: "about" */ '../views/DaoFans.vue'),
+		meta: {
+			title: 'SeeDAO | DAO it, Do it !',
+		},
+	},
+	{
 		path: '/about',
 		name: 'About',
 		// route level code-splitting
