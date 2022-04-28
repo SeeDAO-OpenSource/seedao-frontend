@@ -121,7 +121,7 @@ export default {
       >{{ t("header.nft") }}</router-link
     >
     <router-link
-      to="/daofans"
+      to="/hall"
       class="
         font-general-medium
         block
@@ -135,8 +135,8 @@ export default {
         mb-2
         sm:py-2
       "
-      :aria-label="t('header.daofans')"
-      >{{ t("header.daofans") }}</router-link
+      :aria-label="t('header.hall')"
+      >{{ t("header.hall") }}</router-link
     >
     <a
       href="https://seedhacks.xyz/home"
