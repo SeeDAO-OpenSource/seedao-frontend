@@ -47,7 +47,7 @@ export default {
         <div
             class="flex flex-row items-center justify-between relative filter-container"
         >
-            <div class="titlefont">累计MINT：{{ total }}</div>
+            <div class="titlefont">累计铸造：{{ total }}</div>
             <div class="flex search-container">
                 <input
                     class="keywords-input"

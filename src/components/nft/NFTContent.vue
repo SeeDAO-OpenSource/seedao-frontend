@@ -22,13 +22,13 @@ export default {
         <!-- Banner left contents -->
         <div class="w-full flex justify-between py-10">
             <div>
-                <p class="text-3xl">累计mint： 424</p>
+                <p class="text-3xl">累计铸造： 424</p>
             </div>
             <div>
-                <p class="text-3xl">Unique Holders： 361</p>
+                <p class="text-3xl">持有者数量： 361</p>
             </div>
             <div>
-                <p class="text-3xl">Floor： 0.45E</p>
+                <p class="text-3xl">地板价： 0.45E</p>
             </div>
         </div>
         <div>
