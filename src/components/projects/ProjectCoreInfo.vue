@@ -32,11 +32,11 @@ export default {
         <p class="text-gray-500">回溯token总数</p>
       </div>
       <div class=" my-5">
-        <p class="text-4xl font-medium">25<span style="color: #DBE8FF;">%</span></p>
+        <p class="text-4xl font-medium">5<span style="color: #DBE8FF;">%</span></p>
         <p class="text-gray-500">NFT发放情况</p>
       </div>
       <div class=" my-5">
-        <p class="text-4xl font-medium">20<span style="color: #DBE8FF;">+</span></p>
+        <p class="text-4xl font-medium">5<span style="color: #DBE8FF;">+</span></p>
         <p class="text-gray-500">项目数量</p>
       </div>
     </div>
