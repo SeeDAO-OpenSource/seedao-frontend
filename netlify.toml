@@ -1,6 +1,6 @@
 [[redirects]]
   from = "/api/v1/blob*"
-  to = "https://124.221.160.98:5000/api/v1/blob:splat"
+  to = "http://124.221.160.98:5000/api/v1/blob:splat"
   status = 200
   force = true
 
