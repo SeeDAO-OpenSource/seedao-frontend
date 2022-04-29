@@ -45,6 +45,11 @@ const GUILDS = [
         name: "投研公会",
         img: require("@/assets/images/icon/Router.svg"),
         notion: "https://www.notion.so/2600c97348cd415783b0af644c4765d3"
+    },{
+        id: 9,
+        name: "艺术公会",
+        img: require("@/assets/images/icon/art-guild.svg"),
+        notion: "https://www.notion.so/4eaceae349164435a81d9b766ccd46aa"
     },
 ]
 export default GUILDS;

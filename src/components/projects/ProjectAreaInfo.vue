@@ -111,10 +111,10 @@ export default {
                 <div
                     class="h-2/3 flex flex-wrap justify-start content-center text-left"
                 >
-                    <p v-if="info.title.length > 65" class="p-4 font-semibold">
+                    <p v-if="info.title.length > 65" class="p-4 font-semibold w-full word-break">
                         {{ info.title.slice(0, 65) }}...
                     </p>
-                    <p v-else class="p-4 font-semibold word-break">
+                    <p v-else class="p-4 font-semibold w-full word-break">
                         {{ info.title }}
                     </p>
                 </div>
@@ -179,7 +179,7 @@ export default {
     overflow: hidden;
 }
 .word-break {
-    word-break: keep-all;
+    word-break: break-all;
 }
 .more {
     color: #359bd4;

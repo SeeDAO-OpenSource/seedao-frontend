@@ -16,7 +16,7 @@ export default {
 </script>
 
 <template>
-    <div class="grid grid-cols-1 md:grid-cols-4">
+    <div class="grid grid-cols-1 md:grid-cols-3">
         <div class="p-5" v-for="guildItem of guilds" :key="guildItem.id">
             <div class="flex flex-wrap justify-center content-center">
                 <div

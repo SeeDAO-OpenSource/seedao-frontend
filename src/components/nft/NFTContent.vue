@@ -25,10 +25,10 @@ export default {
                 <p class="text-3xl">累计铸造： 424</p>
             </div>
             <div>
-                <p class="text-3xl">持有者数量： 361</p>
+                <p class="text-3xl">持有者数量： 359</p>
             </div>
             <div>
-                <p class="text-3xl">地板价： 0.45E</p>
+                <p class="text-3xl">地板价： 0.889E</p>
             </div>
         </div>
         <div>
