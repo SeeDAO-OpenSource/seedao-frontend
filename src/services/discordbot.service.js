@@ -1,20 +1,19 @@
 require('dotenv').config();
 
-import { inject } from 'vue';
-// import config from '@/data/config';
+import { inject } from 'vue'; 
 
 export default {
 
     init() {
         const axios = inject('axios');
-        // if (axios !== undefined) {
-        //     if(process.env.NODE_ENV === 'production')
-        //     {
-        //         axios.defaults.baseURL = `${config.BACKEND_BOT_SERVER_URL}`;
-        //     }
-        //     else axios.defaults.baseURL = `${config.BACKEND_BOT_SERVER_URL}`;
-        // }
-        axios.defaults.baseURL = "/discordBotApi/";
+        if (axios !== undefined) {
+            if(process.env.NODE_ENV === 'production')
+            {
+                axios.defaults.baseURL = "/discordBotApi/";
+            }
+            else axios.defaults.baseURL = "http://8.210.30.59/";
+        }
+        
         return axios;
     },
 

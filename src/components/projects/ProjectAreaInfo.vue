@@ -57,7 +57,11 @@ export default {
     updated() {
         feather.replace();
     },
-    methods: {},
+    methods: {
+        jumpout(link) {
+            window.open(link);
+        },
+    },
 };
 </script>
 
@@ -97,12 +101,12 @@ export default {
         </div>
     </div>
     <div class="area sm:w-full md:w-4/5">
-        <div class="overflow-x-auto flex p-10">
+        <div class="overflow-x-auto flex p-4">
             <div
                 v-for="info in getHighlights"
                 :key="info.id"
                 :value="info"
-                class="areainfo flex-none w-60 h-60 m-2"
+                class="areainfo flex-none w-60 h-80 m-1"
             >
                 <div
                     class="h-2/3 flex flex-wrap justify-start content-center text-left"
@@ -110,22 +114,34 @@ export default {
                     <p v-if="info.title.length > 65" class="p-4 font-semibold">
                         {{ info.title.slice(0, 65) }}...
                     </p>
-                    <p v-else class="p-4 font-semibold">
+                    <p v-else class="p-4 font-semibold word-break">
                         {{ info.title }}
                     </p>
                 </div>
-                <div class="h-1/3 flex">
+                <div class="h-1/3 flex p-4">
                     <div
-                        class="w-full p-1 flex flex-row flex-wrap justify-start content-center"
+                        class="w-full p-1 flex flex-col justify-start content-center"
                     >
-                        <img width="32" :src="info.author.iconUrl" />
-                        <div class="font-semibold">
-                            {{ info.author.name }}
+                        <div class="flex flex-row flex-wrap justify-start">
+                            <img width="32" :src="info.author.iconUrl" />
+                            <div
+                                class="font-semibold word-overflow"
+                                style="max-width:180px"
+                            >
+                                {{ info.author.name }}
+                            </div>
                         </div>
-                        <div class="font-semibold text-gray-400">
+                        <div
+                            class="font-semibold text-gray-400 flex justify-end"
+                        >
                             &nbsp;{{
                                 new Date(info.timestamp * 1000).toLocaleString()
                             }}
+                        </div>
+                        <div class="flex item-center justify-end">
+                            <span @click="jumpout(info.link)" class="more"
+                                >去discord查看更多</span
+                            >
                         </div>
                     </div>
                 </div>
@@ -155,5 +171,22 @@ export default {
 .c {
     border-radius: 80px;
     background: #b7d2ff;
+}
+.word-overflow {
+    white-space: nowrap;
+    word-break: normal;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.word-break {
+    word-break: keep-all;
+}
+.more {
+    color: #359bd4;
+}
+.more:hover {
+    cursor: pointer;
+    color: #1883c1;
+    text-decoration: underline;
 }
 </style>
