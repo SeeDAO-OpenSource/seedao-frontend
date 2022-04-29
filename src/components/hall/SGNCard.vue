@@ -65,7 +65,7 @@ export default {
                     Discord ID
                 </div>
                 <div
-                    class="font-semibold text-black text-left text-xl"
+                    class="font-semibold text-black text-left"
                     v-if="sgnObj.discordName"
                 >
                     {{ sgnObj.discordName }}
@@ -79,6 +79,7 @@ export default {
         <div class="flex flex-wrap" v-if="guilds">
             <SeeTag
                 v-for="(guild, index) of guilds"
+                v-show="guilds != ''"
                 :key="index"
                 :name="guild"
                 :bgColor="guild === '协调委员' ? '#FDF5D0' : '#D5F7FD'"
