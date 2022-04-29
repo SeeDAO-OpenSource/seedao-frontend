@@ -89,6 +89,7 @@ export default {
         <div class="flex flex-wrap margin-bottom-10" v-if="projects">
             <SeeTag
                 v-for="(project, index) of projects"
+                v-show="project != ''"
                 :key="index"
                 :name="project"
                 bgColor="#DAD8FB"
