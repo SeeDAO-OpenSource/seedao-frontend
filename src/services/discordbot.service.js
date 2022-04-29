@@ -14,13 +14,14 @@ export default {
         //     }
         //     else axios.defaults.baseURL = `${config.BACKEND_BOT_SERVER_URL}`;
         // }
+        axios.defaults.baseURL = "/discordBotApi/";
         return axios;
     },
 
     get(params) {
         return new Promise((resolve) => {
             const axios = this.init();
-            axios.get('/discordBotApi/highlights', params).then(res => resolve(res)).catch((error) => resolve(error));
+            axios.get('highlights', params).then(res => resolve(res)).catch((error) => resolve(error));
         });
     },
 
