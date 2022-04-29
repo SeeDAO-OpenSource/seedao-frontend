@@ -27,7 +27,7 @@ export default {
     <!-- Banner left contents -->
     <div class="w-full h-96 banner bg-cover md:bg-contain sm:bg-repeat-x">
       <div>
-        <p class="text-xl font-extrabold titlefont md:text-6xl py-5">SeeDAD</p>
+        <p class="text-xl font-extrabold titlefont md:text-6xl py-5">SeeDAO</p>
       </div>
       <div class="flex justify-center">
         <img src="~@/assets/images/nft/NFT_IN_BOLD.svg" class="w-72 md:w-96" />
