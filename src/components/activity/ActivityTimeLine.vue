@@ -131,7 +131,7 @@ export default {
               </div> -->
             </div>
           </div>
-          <div class="h-1/4 sm:h-1/3 flex justify-start">
+          <div class="h-3/4 sm:h-1/3 flex justify-start">
             <p class="flex flex-wrap content-center">
               <font v-if="event.description.length > 140" align="left">{{ event.description.slice(0,140) }} ...</font>
               <font v-else align="left">{{ event.description }}</font>
