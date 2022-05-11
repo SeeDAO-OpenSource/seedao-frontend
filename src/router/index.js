@@ -29,6 +29,15 @@ const routes = [
 		},
 	},
 	{
+		path: '/mint',
+		name: 'Mint',
+		component: () =>
+			import('../views/Mint.vue'),
+		meta: {
+			title: 'SeeDAO | DAO it, Do it !',
+		},
+	},
+	{
 		path: '/nft',
 		name: 'NFT',
 		// route level code-splitting
