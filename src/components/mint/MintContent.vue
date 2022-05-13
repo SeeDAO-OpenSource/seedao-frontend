@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: "NFTContent",
+    name: "MintContent",
     data: () => {
         return {
             theme: "",
