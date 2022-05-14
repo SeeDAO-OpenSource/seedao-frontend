@@ -11,6 +11,7 @@ import Button from "../reusable/Button.vue";
 import VueMetamask from "vue-metamask";
 
 // Vuex
+import { event } from 'vue-gtag';
 import { mapGetters, mapActions } from "vuex";
 import {
   WALLET_ADDRESS,
@@ -89,7 +90,9 @@ export default {
     },
     setWallet(data) {
       this.isConnecting = false;
-      this.$store.dispatch(CONNECT_WALLET, data);
+      this.$store.dispatch(CONNECT_WALLET, data).then(()=>{
+        event('login', { method: 'MetaMask' });
+      });
     },
     updateTheme(theme) {
       this.theme = theme;

@@ -8,11 +8,14 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 import './assets/css/app.css';
+import config from './data/config';
 import BackToTop from 'vue-backtotop';
 import cors from 'cors';
 import axios from "axios";
 import VueAxios from "vue-axios";
 import Notifications from '@kyvg/vue3-notification';
+import VueGtag from "vue-gtag";
+
 
 
 const feather = require('feather-icons');
@@ -36,6 +39,12 @@ const app = createApp(App)
 	.use(VueAxios, axios)
 	.use(BackToTop)
 	.use(Notifications)
+	.use(VueGtag, {
+		config: { id: config.GOOGLE_ANALYTICS_ID,
+		params: {
+			anonymize_ip: true
+		}}
+	  }, router);
 
 app.provide('axios', app.config.globalProperties.axios);
 app.mount('#app');
