@@ -1,12 +1,11 @@
 import { ethers } from "ethers";
 import { abi } from "@/api/SeeDAO.json";
 import { abi_new } from "@/api/SeeDAONew.json";
-import { whitelist4 } from "@/data/whitelist/treeFinal4.json";
-import { whitelist5 } from "@/data/whitelist/treeFinal5.json";
+import { whitelist5_15 } from "@/data/whitelist/treeFinal_5_15.json";
 // Notice： 白名单的key必须要小写
 
 // const whiteListArray = [{}, {}, whitelist2, whitelist3]; //dictionary of whitelist
-const whiteListArray = [{}, {}, {}, {}, whitelist4, whitelist5];
+const whiteListArray = [{}, {}, {}, {}, whitelist5_15];
 let provider = new ethers.providers.Web3Provider(window.ethereum, "any");
 /**
  * @description 判断当前地址是否在白名单并返回在第几批（0代表不在）
