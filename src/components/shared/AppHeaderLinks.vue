@@ -16,9 +16,8 @@ export default {
 <template>
   <!-- Header links -->
   <div
-    :class="isOpen ? 'block' : 'hidden'"
-    class="
-      m-0
+    :class="
+      `m-0
       sm:ml-4
       mt-5
       sm:mt-3 sm:flex
@@ -28,6 +27,8 @@ export default {
       items-center
       shadow-lg
       sm:shadow-none
+      ${isOpen ? 'block' : 'hidden'}
+    `
     "
   >
     <router-link
@@ -83,7 +84,8 @@ export default {
         sm:py-2
       "
       :aria-label="t('header.deschool')"
-      >{{ t("header.deschool") }}</a>
+      >{{ t("header.deschool") }}</a
+    >
     <a
       target="_blank"
       href="https://forum.seedao.xyz/"
@@ -101,7 +103,8 @@ export default {
         sm:py-2
       "
       :aria-label="t('header.govern')"
-      >{{ t("header.govern") }}</a>
+      >{{ t("header.govern") }}</a
+    >
     <router-link
       to="/nft"
       class="
@@ -156,7 +159,8 @@ export default {
         sm:py-2
       "
       :aria-label="t('header.seedhack')"
-      >{{ t("header.seedhack") }}</a>
+      >{{ t("header.seedhack") }}</a
+    >
     <div
       class="
         border-t-2
