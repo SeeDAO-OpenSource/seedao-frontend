@@ -43,8 +43,7 @@ const actions = {
     [CONNECT_WALLET](context, wallet) {
         if (wallet.type !== 'NO_LOGIN') {
             localStorage.setItem(WALLET_ADDRESS, wallet.metaMaskAddress);
-            context.commit(SET_WALLET, wallet);
-            console.log('Metamask is connected.');            
+            context.commit(SET_WALLET, wallet);          
         }
         else localStorage.removeItem(WALLET_ADDRESS);
     }

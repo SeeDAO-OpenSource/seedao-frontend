@@ -1,7 +1,7 @@
 import { ethers } from "ethers";
 import { abi } from "@/api/SeeDAO.json";
 import { abi_new } from "@/api/SeeDAONew.json";
-import { whitelist5_15 } from "@/data/whitelist/treeFinal_5_15.json";
+import whitelist5_15 from "@/data/whitelist/treeFinal_5_15.json";
 // Notice： 白名单的key必须要小写
 
 // const whiteListArray = [{}, {}, whitelist2, whitelist3]; //dictionary of whitelist
