@@ -50,7 +50,6 @@ const actions = {
             context.commit(SET_WALLET, wallet);
             const provider = new ethers.providers.Web3Provider(wallet.web3.givenProvider)
             provider.pollingInterval = 12000
-            console.log('getSigner:', provider.getSigner());
             context.commit(SET_PROVIDER, provider);
         }
         else {
@@ -64,7 +63,6 @@ const mutations = {
         state.wallet = wallet
     },
     [SET_PROVIDER](state, provider) {
-        console.log('provider:', provider);
         state.provider = provider;
     },
 };

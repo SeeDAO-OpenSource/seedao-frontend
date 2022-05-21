@@ -48,7 +48,6 @@ const actions = {
         return new Promise((resolve) => {
             const params = { databaseId: notionDB[DB_NAME_BOUNTY] };
             NotionService.post(params).then(({ data }) => {
-                console.log('bountyData::',data.data);
                 context.commit(SET_BOUNTY_DATA, data.data.results);
                 resolve(data.data);
             })     
