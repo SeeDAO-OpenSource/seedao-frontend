@@ -53,7 +53,8 @@ export default {
               });
             } else {
               let batchId = checkIsInWhitelist(address);
-              if (batchId > 3) {
+              console.log('batchId:', batchId);
+              if (batchId > 0) {
                 mintWhitelistByBatchId(address, batchId)
                   .then(() => {
                     this.$notify({
@@ -62,10 +63,10 @@ export default {
                     });
                     resolve();
                   })
-                  .catch(() => {
+                  .catch((error) => {
                     this.$notify({
                       type: "error",
-                      text: "抱歉，请再尝试一次",
+                      text: `抱歉，请再尝试一次, 错误讯息: ${error}`,
                     });
                   });
               } else {
