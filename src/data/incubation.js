@@ -27,7 +27,7 @@ const IncubatinProjects = [
     }, {
         id: 5,
         title: 'C-Combinator',
-        link: "https://rowan-mollusk-a75.notion.site/C-Combinator-ac6692aad00146e3aab8aa3c81422d95",
+        link: "https://app.seedao.cc/",
         description: "孵化器是SeeDAO孵化业务的主要技术平台，可以帮助web3领域的创新企业加速成长，快速落地。",
         img: require('@/assets/images/c-com.jpg'),
     }
