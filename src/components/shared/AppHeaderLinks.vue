@@ -142,7 +142,7 @@ export default {
       >{{ t("header.hall") }}</router-link
     >
     <a
-      href="https://seedhacks.xyz/home"
+      href="https://app.seedao.cc/"
       target="_blank"
       class="
         italic
