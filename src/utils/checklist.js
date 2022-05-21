@@ -16,8 +16,7 @@ const SGN_ADDRESS = '0x883555EBb9eDF7b4c448387A4E3114418A130D55';
 function checkIsInWhitelist(address) {
     let batchId = 0;
     if (address) {
-        // address = address.toLocaleLowerCase();
-        address = '0x172697d24Da16f36caf2FAdC3e78B5a538fC858E'.toLocaleLowerCase();
+        address = address.toLocaleLowerCase();
         whiteListArray.forEach((wl) => {
             const whitelist = Object.keys(wl.whitelist);
             let index = whitelist.findIndex((addr) => {
@@ -47,7 +46,6 @@ async function mintWhitelistByBatchId(address, batchId) {
                     return addr.toLocaleLowerCase() === address
                 })
                 if (index >= 0) {
-                    console.log('wwwww:', wl.whitelist[whitelist[index]]);
                     proof = wl.whitelist[whitelist[index]];
                 }
             })
