@@ -111,6 +111,24 @@ const routes = [
 			title: 'Stoman - Contact',
 		},
 	},
+	{
+		path: '/integral/ActiveAdd',
+		name: 'ActiveAdd',
+		component: () =>
+			import('../views/ActiveAdd.vue'),
+		meta: {
+			title: 'Stoman - Contact',
+		},
+	},
+	{
+		path: '/integral/PoapSend',
+		name: 'PoapSend',
+		component: () =>
+			import('../views/PoapSend.vue'),
+		meta: {
+			title: 'Stoman - Contact',
+		},
+	},
 ];
 
 const router = createRouter({
