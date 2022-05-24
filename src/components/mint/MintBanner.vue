@@ -44,36 +44,59 @@ export default {
         this.isConnecting = false;
         this.$store
           .dispatch(CONNECT_WALLET, data)
-          .then(() => {
-            const address = localStorage.getItem(WALLET_ADDRESS);
-            if (address === undefined || address === "") {
+          .then((wallet) => {
+            if (wallet.netID !== 1) {
               this.$notify({
                 type: "error",
-                text: "请接入您的钱包!",
+                text: `请将小狐狸钱包切换到以太坊主网`,
               });
+              resolve();
             } else {
-              let batchId = checkIsInWhitelist(address);
-              console.log('batchId:', batchId);
-              if (batchId > 0) {
-                mintWhitelistByBatchId(address, batchId)
-                  .then(() => {
-                    this.$notify({
-                      type: "success",
-                      text: "领取成功!",
-                    });
-                    resolve();
-                  })
-                  .catch((error) => {
-                    this.$notify({
-                      type: "error",
-                      text: `抱歉，请再尝试一次, 错误讯息: ${error}`,
-                    });
-                  });
-              } else {
+              const address = localStorage.getItem(WALLET_ADDRESS);
+              if (address === undefined || address === "") {
                 this.$notify({
                   type: "error",
-                  text: "抱歉，您不在白名单中~",
+                  text: "请接入您的钱包!",
                 });
+              } else {
+                let batchId = checkIsInWhitelist(address);
+                if (batchId > 0) {
+                  mintWhitelistByBatchId(address, batchId)
+                    .then((tx) => {
+                      this.$notify({
+                        type: "info",
+                        duration: 300000,
+                        text: "正在鑄造中...",
+                      });
+                      tx.wait()
+                        .then((ret) => {
+                          this.$notify({
+                            type: "success",
+                            duration: 100000,
+                            text: "领取成功!",
+                          });
+                          resolve(ret);
+                        })
+                        .catch((error) => {
+                          this.$notify({
+                            type: "error",
+                            text: `抱歉，鑄造失敗, 错误讯息: ${error}`,
+                          });
+                        });
+                    })
+                    .catch((error) => {
+                      this.$notify({
+                        type: "error",
+                        text: `抱歉，请再尝试一次, 错误讯息: ${error}`,
+                      });
+                    });
+                } else {
+                  this.$notify({
+                    type: "error",
+                     duration: 10000,
+                    text: `抱歉，您不在白名单中~ (当前錢包: ${address.slice(0,5)}...${address.slice(address.length-5,address.length)})`,
+                  });
+                }
               }
             }
           })

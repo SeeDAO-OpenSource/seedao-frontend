@@ -55,6 +55,7 @@ const actions = {
         else {
             localStorage.removeItem(WALLET_ADDRESS);
         }
+        return wallet;
     }
 };
 
