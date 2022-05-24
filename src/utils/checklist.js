@@ -56,8 +56,8 @@ async function mintWhitelistByBatchId(address, batchId) {
                 abi_new,
                 provider.getSigner()
             );
-            contactSD_signer_new.mintWhiteList(batchId, proof).then(() => {
-                resolve();
+            contactSD_signer_new.mintWhiteList(batchId, proof).then((tx) => {
+                    resolve(tx);
             }).catch(({ error }) => {
                 reject(error.message + ` (proof=${JSON.stringify(proof)})`);
             });
