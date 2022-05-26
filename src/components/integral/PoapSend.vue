@@ -1,77 +1,91 @@
 <script>
-import PoapSelect from './PoapSelect.vue';
+//import PoapSelect from './PoapSelect.vue';
+import POAPS from "../../data/poaps";
 export default {
     name: "PoapSend",
 		components: {
-			PoapSelect,
+			//PoapSelect
+		},
+		beforeMount:() =>{
+			POAPS.forEach(p =>{ p.select = false})
 		},
 		computed: {
 			filteredList() {
-				return this.clients.filter(post => {
-					return post.title.toLowerCase().includes(this.search.toLowerCase())
+				console.log(this.poapsobj)
+				return this.poapsobj.filter(post => {
+					return post.name.toLowerCase().includes(this.search.toLowerCase())
 				})
 			}
 		},
     data: () => {
         return {
+					submitdata:{
+						union:'',
+						eventName:'',
+						address:'',
+					},
 					search: '',
-          value2: ['a1', 'b2'],
-          options: [...Array(25)].map((_, i) => ({ value: (i + 10).toString(36) + (i + 1) })),
-					clients: [
+					poapsobj:POAPS,
+					unions:[
 						{
-							id: 1,
-							title: '设计公会共建 POAP',
-							img: require('@/assets/images/poaps/1.png'),
-							select: false,
+							"Id":'U1',
+							"Name":'翻译公会-translation',
 						},
 						{
-							id: 2,
-							title: '信源 POAP',
-							img: require('@/assets/images/poaps/2.png'),
-							select: false,
+							"Id":'U2',
+							"Name":'宣传公会-publicity ',
 						},
 						{
-							id: 3,
-							title: '翻译 POAP',
-							img: require('@/assets/images/poaps/3.png'),
-							select: false,
+							"Id":'U3',
+							"Name":'产品公会-product',
 						},
 						{
-							id: 4,
-							title: '校对 POAP',
-							img: require('@/assets/images/poaps/4.png'),
-							select: false,
+							"Id":'U4',
+							"Name":'运营公会-operation',
 						},
 						{
-							id: 5,
-							title: '围炉夜话第二期纪念 POAP',
-							img: require('@/assets/images/poaps/5.png'),
-							select: false,
+							"Id":'U5',
+							"Name":'开发公会-development',
 						},
 						{
-							id: 6,
-							title: '执笔人 POAP',
-							img: require('@/assets/images/poaps/6.png'),
-							select: false,
+							"Id":'U6',
+							"Name":'建筑公会-construction',
 						},
 						{
-							id: 7,
-							title: '城隍庙搭建一级 POAP',
-							img: require('@/assets/images/poaps/7.png'),
-							select: false,
+							"Id":'U7',
+							"Name":'投研公会-insightandresearch',
 						},
 						{
-							id: 7,
-							title: '城隍庙搭建二级 POAP',
-							img: require('@/assets/images/poaps/8.png'),
-							select: false,
+							"Id":'U8',
+							"Name":'设计公会-design ',
 						},
-					],
+						{
+							"Id":'U9',
+							"Name":'艺术公会-art ',
+						},
+						{
+							"Id":'U10',
+							"Name":"nft-club",
+						}
+						
+					]
         };
     },
 		methods: {
 			submit:function(){
 				//新增的地方
+			},
+			setSelect: function(c){
+				let t = this.poapsobj.filter(post => post.select == true)
+				t.forEach(p => p.select = p.select = false)
+				c.select = (!c.select) ? true : false
+				if(t.length > 0){
+					const p = JSON.parse(
+						JSON.stringify(t[0])
+					);
+					if(c.id == p.id)
+						c.select = false
+				}
 			}
 		}
 };
@@ -92,18 +106,35 @@ export default {
 					<label
 						class="block text-lg text-primary-dark dark:text-primary-light mb-2"
 						for="subject"
-						>Community</label
+						>工会</label
 					>
-          <a-space direction="vertical">
-            <a-select
-              class="w-full px-5 py-2 border border-gray-300 "
-              v-model:value="value2"
-              :options="options"
-              mode="multiple"
-              :size="size"
-              placeholder="Please select"
-            ></a-select>
-          </a-space>
+					<select
+						:name="select"
+						:id="select"
+						class="font-general-medium
+								px-4
+								py-2
+								border-1 border-gray-200
+								dark:border-secondary-dark
+								rounded-lg
+								text-sm
+								sm:text-md
+								bg-secondary-light
+								dark:bg-ternary-dark
+								text-primary-dark
+								dark:text-ternary-light
+							"
+					>
+						<option value class="text-sm sm:text-md">请选择...</option>
+						<option
+							v-for="union in unions"
+							:key="union"
+							:value="union.Id"
+							class="sm:text-md"
+						>
+							{{ union.Name }}
+						</option>
+					</select>
         </div>
 				<div>
 					<label
@@ -117,31 +148,16 @@ export default {
 						name="name"
 						type="text"
 						required=""
-						placeholder="Your Name"
-						aria-label="Name"
-					/>
-				</div>
-				<div>
-					<label
-						class="block text-lg text-primary-dark dark:text-primary-light mb-2"
-						for="subject"
-						>发送钱包</label
-					>
-					<input
-						class="w-full px-5 py-2 border border-gray-300 dark:border-primary-dark border-opacity-50 text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md"
-						id="subject"
-						name="subject"
-						type="text"
-						required=""
-						placeholder="Subject"
-						aria-label="Subject"
+						placeholder="Event Names"
+						aria-label="EventName"
+						v-model="submitdata.eventName"
 					/>
 				</div>
 				<div>
 					<label
 						class="block text-lg text-primary-dark dark:text-primary-light mb-2"
 						for="message"
-						>发放原因</label
+						>发送钱包</label
 					>
 					<textarea
 						class="w-full px-5 py-2 border border-gray-300 dark:border-primary-dark border-opacity-50 text-primary-dark dark:text-secondary-light bg-ternary-light dark:bg-ternary-dark rounded-md shadow-sm text-md"
@@ -149,6 +165,7 @@ export default {
 						name="message"
 						cols="14"
 						rows="6"
+						v-model="submitdata.address"
 						aria-label="Message"
 					></textarea>
 				</div>
@@ -175,13 +192,18 @@ export default {
 						placeholder="Search title..."
 					/>
   </div>
-		<div class="overflow-y-auto scrollbar-w-2 scrollbar-track-gray-lighter scrollbar-thumb-rounded scrollbar-thumb-gray scrolling-touch h-4/6">
+		<div class="overflow-y-auto scrollbar-w-2 scrollbar-track-gray-lighter scrollbar-thumb-rounded scrollbar-thumb-gray scrolling-touch h-2/4">
 				<div class="p-4 grid gap-4 grid-cols-3 bg-fuchsia-300 bg-stripes bg-stripes-white rounded-md">
-						<PoapSelect
-							v-for="client in filteredList"
-							:key="client.id"
-							:client="client"
+					<div class="flex flex-col items-center justify-center" :key="c.id" v-for="c in filteredList">
+						<img
+							:alt="c.name"
+							@click="setSelect(c)"
+							class="w-64 py-5 px-10 border border-ternary-light"
+							:class="{'bg-indigo-200':c.select}"
+							:src="require('@/assets/images/poaps/'+c.id+'.png')"
 						/>
+						<span>{{c.name}}</span>
+					</div>
 				</div>
 		</div>
 	</div>
