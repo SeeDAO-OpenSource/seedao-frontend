@@ -3,8 +3,48 @@ export default {
     name: "ActiveAdd",
     data: () => {
         return {
-          value2: ['a1', 'b2'],
-          options: [...Array(25)].map((_, i) => ({ value: (i + 10).toString(36) + (i + 1) })),
+					unions:[
+						{
+							"Id":'U1',
+							"Name":'翻译公会-translation',
+						},
+						{
+							"Id":'U2',
+							"Name":'宣传公会-publicity ',
+						},
+						{
+							"Id":'U3',
+							"Name":'产品公会-product',
+						},
+						{
+							"Id":'U4',
+							"Name":'运营公会-operation',
+						},
+						{
+							"Id":'U5',
+							"Name":'开发公会-development',
+						},
+						{
+							"Id":'U6',
+							"Name":'建筑公会-construction',
+						},
+						{
+							"Id":'U7',
+							"Name":'投研公会-insightandresearch',
+						},
+						{
+							"Id":'U8',
+							"Name":'设计公会-design ',
+						},
+						{
+							"Id":'U9',
+							"Name":'艺术公会-art ',
+						},
+						{
+							"Id":'U10',
+							"Name":"nft-club",
+						}
+					]
         };
     },
     methods: {
@@ -28,19 +68,35 @@ export default {
 					<label
 						class="block text-lg text-primary-dark dark:text-primary-light mb-2"
 						for="subject"
-						>Community</label
+						>工会</label
 					>
-          <a-space direction="vertical">
-            <a-select
-              class="w-full px-5 py-2 border border-gray-300 "
-              v-model:value="value2"
-              :options="options"
-              mode="multiple"
-              :size="size"
-              placeholder="Please select"
-              style="width: 400px"
-            ></a-select>
-          </a-space>
+					<select
+						:name="select"
+						:id="select"
+						class="font-general-medium
+								px-4
+								py-2
+								border-1 border-gray-200
+								dark:border-secondary-dark
+								rounded-lg
+								text-sm
+								sm:text-md
+								bg-secondary-light
+								dark:bg-ternary-dark
+								text-primary-dark
+								dark:text-ternary-light
+							"
+					>
+						<option value class="text-sm sm:text-md">请选择...</option>
+						<option
+							v-for="union in unions"
+							:key="union"
+							:value="union.Id"
+							class="sm:text-md"
+						>
+							{{ union.Name }}
+						</option>
+					</select>
         </div>
 				<div>
 					<label
