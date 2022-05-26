@@ -82,7 +82,7 @@ const routes = [
 		component: () =>
 			import(/* webpackChunkName: "projects" */ '../views/Projects.vue'),
 		meta: {
-			title: 'Stoman - Projects',
+			title: 'SeeDAO | DAO it, Do it !',
 		},
 	},
 	{
@@ -96,7 +96,7 @@ const routes = [
 				/* webpackChunkName: "projects" */ '../views/SingleProject.vue'
 			),
 		meta: {
-			title: 'Stoman - Single Project',
+			title: 'SeeDAO | DAO it, Do it !',
 		},
 	},
 	{
@@ -108,25 +108,25 @@ const routes = [
 		component: () =>
 			import(/* webpackChunkName: "projects" */ '../views/Contact.vue'),
 		meta: {
-			title: 'Stoman - Contact',
+			title: 'SeeDAO | DAO it, Do it !',
 		},
 	},
 	{
-		path: '/integral/ActiveAdd',
+		path: '/admin/ActiveAdd',
 		name: 'ActiveAdd',
 		component: () =>
 			import('../views/ActiveAdd.vue'),
 		meta: {
-			title: 'Stoman - Contact',
+			title: 'SeeDAO | DAO it, Do it !',
 		},
 	},
 	{
-		path: '/integral/PoapSend',
+		path: '/admin/PoapSend',
 		name: 'PoapSend',
 		component: () =>
 			import('../views/PoapSend.vue'),
 		meta: {
-			title: 'Stoman - Contact',
+			title: 'SeeDAO | DAO it, Do it !',
 		},
 	},
 ];

@@ -68,7 +68,7 @@ export default {
 					<label
 						class="block text-lg text-primary-dark dark:text-primary-light mb-2"
 						for="subject"
-						>工会</label
+						>公会</label
 					>
 					<select
 						:name="select"

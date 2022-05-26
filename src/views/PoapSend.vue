@@ -1,5 +1,5 @@
 <script>
-import PoapSend from "../components/integral/PoapSend.vue";
+import PoapSend from "../components/admin/PoapSend.vue";
 
 export default {
 	components: {

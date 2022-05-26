@@ -1,5 +1,5 @@
 <script>
-import ActiveAdd from "../components/integral/ActiveAdd.vue";
+import ActiveAdd from "../components/admin/ActiveAdd.vue";
 
 export default {
 	components: {
