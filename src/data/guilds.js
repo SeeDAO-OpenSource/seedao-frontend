@@ -1,7 +1,7 @@
 const GUILDS = [
     {
         id: 1,
-        name: "开发者工会",
+        name: "开发者公会",
         img: require("@/assets/images/icon/TV.svg"),
         notion: "https://www.notion.so/98972f9683b74c419212c1e7ce53e725"
     },

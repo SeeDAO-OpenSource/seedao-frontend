@@ -11,6 +11,7 @@
 		"@kyvg/vue3-notification": "^2.3.4",
 		"@tailwindcss/forms": "^0.3.3",
 		"@tailwindcss/postcss7-compat": "^2.0.2",
+		"ant-design-vue": "^3.2.4",
 		"autoprefixer": "^9",
 		"axios": "^0.26.1",
 		"core-js": "^3.6.5",

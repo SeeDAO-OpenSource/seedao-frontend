@@ -35,7 +35,7 @@ export default {
                 },
                 {
                     text:
-                        "家人们好~ 产品工会的周会会在今晚八点在Seedao的discrod频道举行。欢迎大家来旁听，互动，seedao and chill",
+                        "家人们好~ 产品公会的周会会在今晚八点在Seedao的discrod频道举行。欢迎大家来旁听，互动，seedao and chill",
                     author: "Will Jiang        ",
                     date: "2022/3/9",
                 },
