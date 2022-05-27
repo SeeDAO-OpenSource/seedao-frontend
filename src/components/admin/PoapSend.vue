@@ -1,8 +1,11 @@
 <script>
 import { mapGetters, mapActions } from "vuex";
+import { ExclamationCircleOutlined } from '@ant-design/icons-vue';
+import { createVNode } from 'vue';
 import { GET_ISSUE_RESULTS, ISSUE_POAP_TESTNET } from "@/store/poap.module";
-
 import POAPS from "../../data/poaps";
+import { Modal } from 'ant-design-vue';
+
 export default {
   name: "PoapSend",
   components: {
@@ -120,6 +123,7 @@ export default {
           Name: "Web3 大学",
         },
       ],
+      visible:false
     };
   },
   methods: {
@@ -163,6 +167,24 @@ export default {
         if (c.id == p.id) c.select = false;
       }
     },
+    showConfirm: function() {
+      Modal.confirm({
+        title: '请确认发送钱包地址是否正确',
+        icon: createVNode(ExclamationCircleOutlined),
+        content: this.submitdata.address,
+
+        onOk() {
+          console.log('ok')
+          return new Promise((resolve, reject) => {
+            setTimeout(Math.random() > 0.5 ? resolve : reject, 1000);
+          }).catch(() => console.log('Oops errors!'));
+        },
+        onCancel() {
+          console.log('Cancel')
+        },
+
+      });
+    }
   },
 };
 </script>
@@ -305,45 +327,45 @@ export default {
             aria-label="Message"
           ></textarea>
         </div>
-        <div v-if="isSubmited === false" class="flex justify-end">
-          <button
-            class="
-              px-4
-              py-2.5
-              text-white
-              tracking-wider
-              bg-indigo-500
-              hover:bg-indigo-600
-              focus:ring-1 focus:ring-indigo-900
-              rounded-lg
-              duration-500
-            "
-            type="submit"
-            aria-label="Send Message"
-            @click.prevent="submit"
-          >
-            提交 (测试网)
-          </button>
-        </div>
-        <div v-else class="flex justify-end">
-          <button
-            class="
-              px-4
-              py-2.5
-              text-white
-              tracking-wider
-              bg-gray-500
-              hover:bg-gray-600
-              focus:ring-1 focus:ring-gray-900
-              rounded-lg
-              duration-500
-            "
-            type="submit"
-            aria-label="Send Message"
-            disabled
-          >
-            提交中... (测试网)
-          </button>
+        <div>
+          <div v-if="isSubmited === false" class="flex justify-end">
+            <button
+              class="
+                px-4
+                py-2.5
+                text-white
+                tracking-wider
+                bg-indigo-500
+                hover:bg-indigo-600
+                focus:ring-1 focus:ring-indigo-900
+                rounded-lg
+                duration-500
+              "
+              aria-label="Send Message"
+              @click="showConfirm"
+            >
+              提交 (测试网)
+            </button>
+          </div>
+          <div v-else class="flex justify-end">
+            <button
+              class="
+                px-4
+                py-2.5
+                text-white
+                tracking-wider
+                bg-gray-500
+                hover:bg-gray-600
+                focus:ring-1 focus:ring-gray-900
+                rounded-lg
+                duration-500
+              "
+              aria-label="Send Message"
+              disabled
+            >
+              提交中... (测试网)1
+            </button>
+          </div>
         </div>
       </form>
       <div v-if="isIssued">
