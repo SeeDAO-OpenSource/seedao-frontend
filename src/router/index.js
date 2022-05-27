@@ -129,6 +129,15 @@ const routes = [
 			title: 'SeeDAO | DAO it, Do it !',
 		},
 	},
+	{
+		path: '/admin/MemberView',
+		name: 'MemberView',
+		component: () =>
+			import('../views/MemberView.vue'),
+		meta: {
+			title: 'SeeDAO | DAO it, Do it !',
+		},
+	},
 ];
 
 const router = createRouter({

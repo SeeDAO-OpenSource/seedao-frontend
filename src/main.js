@@ -18,6 +18,7 @@ import VueGtag from "vue-gtag";
 import Antd from 'ant-design-vue';
 import 'ant-design-vue/dist/antd.css';
 
+
 const feather = require('feather-icons');
 feather.replace();
 
