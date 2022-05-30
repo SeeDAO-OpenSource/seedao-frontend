@@ -24,7 +24,7 @@ export default {
     <div class="flex flex-wrap justify-between content-center infoItem m-10 px-20 py-2">
       
       <div class=" my-5">
-        <p class="text-4xl font-medium">8200<span style="color: #DBE8FF;">+</span></p>
+        <p class="text-4xl font-medium">8400<span style="color: #DBE8FF;">+</span></p>
         <p class="text-gray-500">社区人数</p>
       </div>
       <div class=" my-5">
