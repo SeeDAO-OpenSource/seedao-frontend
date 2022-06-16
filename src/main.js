@@ -15,8 +15,8 @@ import axios from "axios";
 import VueAxios from "vue-axios";
 import Notifications from '@kyvg/vue3-notification';
 import VueGtag from "vue-gtag";
-import Antd from 'ant-design-vue';
-import 'ant-design-vue/dist/antd.css';
+// import Antd from 'ant-design-vue';
+// import 'ant-design-vue/dist/antd.css';
 
 const feather = require('feather-icons');
 feather.replace();
@@ -39,7 +39,7 @@ const app = createApp(App)
 	.use(VueAxios, axios)
 	.use(BackToTop)
 	.use(Notifications)
-	.use(Antd)
+	// .use(Antd)
 	.use(VueGtag, {
 		config: {
 			id: config.GOOGLE_ANALYTICS_ID,
