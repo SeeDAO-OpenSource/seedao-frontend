@@ -6,10 +6,11 @@ import whitelist5_15 from "@/data/whitelist/treeFinal_5_15.json";
 import whitelist5_30 from "@/data/whitelist/treeFinal_5_30.json";
 import whitelist6_13 from "@/data/whitelist/treeFinal_6_13.json";
 import whitelist6_20 from "@/data/whitelist/treeFinal_6_20.json";
+import whitelist_add from "@/data/whitelist/treeFinal_add.json";
 // Notice： 白名单的key必须要小写
 
 // const whiteListArray = [{}, {}, whitelist2, whitelist3]; //dictionary of whitelist
-const whiteListArray = [whitelist4, whitelist5, whitelist5_15, whitelist5_30, whitelist6_13, whitelist6_20]
+const whiteListArray = [whitelist4, whitelist5, whitelist5_15, whitelist5_30, whitelist6_13, whitelist6_20, whitelist_add]
 
 const SGN_ADDRESS = '0x883555EBb9eDF7b4c448387A4E3114418A130D55';
 
