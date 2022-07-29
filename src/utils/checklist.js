@@ -7,7 +7,7 @@ import whitelist5_30 from "@/data/whitelist/treeFinal_5_30.json";
 import whitelist6_13 from "@/data/whitelist/treeFinal_6_13.json";
 import whitelist6_20 from "@/data/whitelist/treeFinal_6_20.json";
 import whitelist_add from "@/data/whitelist/treeFinal_add.json";
-import whitelist7_26 from "@/data/whitelist/treeFinal_7_26.json";
+import whitelist7_26 from "@/data/whitelist/treeFinal_7_26_add.json";
 // Notice： 白名单的key必须要小写
 
 // const whiteListArray = [{}, {}, whitelist2, whitelist3]; //dictionary of whitelist
