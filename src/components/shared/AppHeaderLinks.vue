@@ -68,7 +68,7 @@ export default {
       >{{ t("header.event") }}</router-link
     >
     <a
-      href="https://stg.deschool.app/"
+      href="https://deschool.app/"
       target="_blank"
       class="
         font-general-medium
