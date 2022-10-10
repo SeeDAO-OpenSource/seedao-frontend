@@ -24,7 +24,7 @@ export default {
     <div class="flex flex-wrap justify-between content-center infoItem m-10 px-20 py-2">
       
       <div class=" my-5">
-        <p class="text-4xl font-medium">9470<span style="color: #DBE8FF;">+</span></p>
+        <p class="text-4xl font-medium">9500<span style="color: #DBE8FF;">+</span></p>
         <p class="text-gray-500">社区人数</p>
       </div>
       <div class=" my-5">
@@ -32,7 +32,7 @@ export default {
         <p class="text-gray-500">回溯token总数</p>
       </div>
       <div class=" my-5">
-        <p class="text-4xl font-medium">470<span style="color: #DBE8FF;">%</span></p>
+        <p class="text-4xl font-medium">4.74<span style="color: #DBE8FF;">%</span></p>
         <p class="text-gray-500">NFT发放情况</p>
       </div>
       <div class=" my-5">
