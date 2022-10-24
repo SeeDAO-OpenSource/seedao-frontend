@@ -1,11 +1,11 @@
 import { ethers } from "ethers";
 import { abi_new } from "@/api/SeeDAONew.json";
-import whitelist10_7 from "@/data/whitelist/treeFinal_10_7.json";
+import whitelist10_15 from "@/data/whitelist/treeFinal_10_15.json";
 
 // Notice： 白名单的key必须要小写
 
 // const whiteListArray = [{}, {}, whitelist2, whitelist3]; //dictionary of whitelist
-const whiteListArray = [whitelist10_7]
+const whiteListArray = [whitelist10_15]
 
 const SGN_ADDRESS = '0x883555EBb9eDF7b4c448387A4E3114418A130D55';
 
